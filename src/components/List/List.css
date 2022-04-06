@@ -1,0 +1,16 @@
+.Contenedor{
+    margin: 25px;
+
+}
+
+.selectOption{
+    display: flex;
+    margin-top: 20px;
+
+}
+.selectContainer{
+    padding: 30px;
+    width: 100%;
+    margin-left: 20px;
+    
+}

@@ -1,0 +1,49 @@
+.cardRow{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0px 20px 0px 20px; */
+    align-items: center;
+}
+.cardRow h3{
+    font-weight: 500;
+    color: grey;
+    font-size: 12px;
+}
+
+.locationIcon{
+    size: 50px;
+    color: gray;
+}
+
+.placeName{
+    font-size: 20px;
+    /* padding: 20px 20px 0px 20px; */
+    text-align: center;
+}
+.awardContainer{
+    display: grid;
+    align-items: center;
+  
+    flex-wrap: nowrap;
+}
+.awardSubContainer{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.awardSubContainer H3{
+    font-weight: 500;
+    color: grey;
+    font-size: 12px;
+
+}
+.imgAward{
+    height: 15px;
+    width: 15px;
+    margin-top: 5px;
+}
+
+.chipFood{
+    margin: 5px 5px;
+}
