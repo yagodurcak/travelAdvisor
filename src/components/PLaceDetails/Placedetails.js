@@ -1,11 +1,19 @@
 import "./styles.css"
 
-import { Box, Card, CardContent, CardMedia, Chip } from '@material-ui/core'
+import { Box, Card, CardActions, CardContent, CardMedia, Chip } from '@material-ui/core'
 import { LocalPhone, LocationOn } from "@material-ui/icons"
 
+import { Button } from "@material-ui/core"
+import { Rating } from "@material-ui/lab"
 import React from 'react'
 
-function Placedetails({place}) {
+function Placedetails({place, selected, refProp}) {
+
+
+  if (selected) {
+    refProp?.current?.scrollIntoView({behavior: "smooth", block:"start"})
+  }
+
   return (
     <div>
       <Card>
@@ -18,6 +26,10 @@ function Placedetails({place}) {
       <CardContent>
 
       <h2 className="placeName">{place.name}</h2>
+      <div className='cardRow'>
+        <Rating value={Number(place.rating)} readOnly/>
+        <h3>Out of {place.num_reviews} reviews</h3>
+      </div>
       <div className='cardRow'>
         <h3>Price:</h3>
         <h3>{place.price_level}</h3>
@@ -49,8 +61,15 @@ function Placedetails({place}) {
           <Chip  label={name.name} size="small" className="chipFood"/>
 
       ))}
+        <div  className="cardRow">
+          <CardActions>
+          <Button size="small" onClick={()=>{ window.open(place.web_url, "_blank")}}>Trip Advisor</Button>
+          </CardActions>
+          <CardActions>
+          <Button size="small" onClick={()=>{ window.open(place.website, "_blank")}}>Website</Button>
+          </CardActions>
+        </div>
       </CardContent>
-    
       </Card>
     </div>
   )

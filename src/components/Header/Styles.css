@@ -5,14 +5,14 @@
 }
 .searchBox{
   /* background-color: bisque; */
-  width: 30%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .search{
-  width: 40%;
+  width: 90%;
  
   background-color: 	rgb(255, 255, 255, 0.2);
 

@@ -4,10 +4,10 @@ const Url = 'https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary'
 
 
 
-const GetPLacesData = async (ne,sw) => {   
-
+const GetPLacesData = async (ne,sw, type) => {   
+    
     try {
-        const {data: {data}} = await axios.get(Url, {
+        const {data: {data}} = await axios.get(`https://travel-advisor.p.rapidapi.com/${type}/list-in-boundary`, {
 
             params: {
               bl_latitude: sw.lat,
